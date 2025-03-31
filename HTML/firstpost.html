@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/firstpost.css" />
+</head>
+
+<body>
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5ea7cdcdd33cb3b05c775dcac93b551e89b55220ab3380194780749ab10397c2?placeholderIfAbsent=true&apiKey=ea11a689ef344d449385cb3a4188511e"
+        alt="Background" class="background-image" />
+
+    <section class="post-creation" aria-label="Create a new post">
+        <header class="create-post-header">
+            <h1 class="post-title">Create Your First Post</h1>
+            <p class="post-subtitle">Share your thoughts, projects, or updates with your network</p>
+        </header>
+
+        <form class="create-post-form" action="#" method="POST" enctype="multipart/form-data">
+            <div class="create-post-input">
+                <div class="profile-image-container">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cd6f299cf882a5db2ebf736a0dc095ccf1d477d5bb43865c68e4d18b543916f2?placeholderIfAbsent=true&apiKey=ea11a689ef344d449385cb3a4188511e"
+                        alt="User profile picture" class="profile-avatar" loading="lazy" />
+                </div>
+                <div class="input-wrapper">
+                    <textarea class="create-placeholder" placeholder="Share a new project, update, or idea..."
+                        aria-label="Enter your post content" name="post-content" rows="4" maxlength="500"
+                        required></textarea>
+                    <div class="character-counter" aria-live="polite">
+                        <span class="char-count">0</span>/500
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-options">
+                <div class="visibility-selector">
+                    <label for="visibility" class="visibility-label">Visible to:</label>
+                    <select id="visibility" name="visibility" class="visibility-dropdown">
+                        <option value="public">Anyone</option>
+                        <option value="connections">Connections Only</option>
+                        <option value="private">Only Me</option>
+                    </select>
+                </div>
+
+                <div class="media-upload-container">
+                    <button type="button" class="media-upload" aria-label="Add media to post">
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f22346a9cfeffa0bc501c37cbc35d320737a93d97820bc89c3011f30262c48fa?placeholderIfAbsent=true&apiKey=ea11a689ef344d449385cb3a4188511e"
+                            alt="Upload media" class="media-icon" loading="lazy" />
+                        <span class="media-text">Media</span>
+                    </button>
+                    <input type="file" id="media-input" name="media" accept="image/*,video/*" hidden />
+                </div>
+            </div>
+
+            <div class="media-preview" aria-live="polite"></div>
+
+            <button type="submit" class="post-button" aria-label="Submit post" disabled>Post</button>
+        </form>
+
+        <footer class="brand-footer">
+            <h2 class="brand-name">LinkLancer</h2>
+            <p class="footer-text">Connecting professionals worldwide</p>
+        </footer>
+    </section>
+
+    <script>
+        // Basic JavaScript for added functionalities
+        document.addEventListener('DOMContentLoaded', () => {
+            const textarea = document.querySelector('.create-placeholder');
+            const charCount = document.querySelector('.char-count');
+            const postButton = document.querySelector('.post-button');
+            const mediaInput = document.querySelector('#media-input');
+            const mediaPreview = document.querySelector('.media-preview');
+            const mediaUploadBtn = document.querySelector('.media-upload');
+
+            // Character counter
+            textarea.addEventListener('input', () => {
+                const count = textarea.value.length;
+                charCount.textContent = count;
+                postButton.disabled = count === 0;
+            });
+
+            // Media upload and preview
+            mediaUploadBtn.addEventListener('click', () => mediaInput.click());
+            mediaInput.addEventListener('change', () => {
+                const file = mediaInput.files[0];
+                if (file) {
+                    const fileType = file.type.split('/')[0];
+                    const previewElement = document.createElement(fileType === 'image' ? 'img' : 'video');
+                    previewElement.src = URL.createObjectURL(file);
+                    previewElement.classList.add('preview-item');
+                    if (fileType === 'video') previewElement.controls = true;
+                    mediaPreview.innerHTML = '';
+                    mediaPreview.appendChild(previewElement);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
