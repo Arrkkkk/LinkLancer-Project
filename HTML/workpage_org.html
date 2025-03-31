@@ -1,175 +1,199 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../CSS/workpage_org.css" />
+<!DOCTYPE html>
+<html lang="en">
 
-<header class="header">
-    <nav class="nav-bar">
-        <div class="nav-content">
-          <div class="nav-group">
-            <div class="logo-container">
-              <h1 class="logo-text">LinkLancer</h1>
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cdd64a0e503bf886958f6620ab8a40807084a305086a2844111916bcb246b067?placeholderIfAbsent=true&apiKey=ea11a689ef344d449385cb3a4188511e" alt="LinkLancer logo" class="logo-icon" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkLancer - Workpage Org</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/workpage_org.css" />
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav-bar">
+            <div class="nav-content">
+                <div class="nav-group">
+                    <div class="logo-container">
+                        <h1 class="logo-text">LinkLancer</h1>
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cdd64a0e503bf886958f6620ab8a40807084a305086a2844111916bcb246b067?placeholderIfAbsent=true&apiKey=ea11a689ef344d449385cb3a4188511e"
+                            alt="LinkLancer logo" class="logo-icon" />
+                    </div>
+                    <a href="#" class="nav-link nav-link-active">Home</a>
+                </div>
+                <div class="nav-group">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/67ce5befbaeaf876800159b3725f2d7d616cd011b7e9957129f4272c9add4776?placeholderIfAbsent=true&apiKey=ea11a689ef344d449385cb3a4188511e"
+                        alt="Work icon" class="nav-icon" />
+                    <a href="#" class="nav-link">Work</a>
+                </div>
+                <div class="nav-group">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a274658f242941b22691a8149f0b822e37bd0b7e3435754547ee63af6c00dba4?placeholderIfAbsent=true&apiKey=ea11a689ef344d449385cb3a4188511e"
+                        alt="Chat icon" class="nav-icon-chat" />
+                    <a href="#" class="nav-link">Chat</a>
+                </div>
             </div>
-            <a href="#" class="nav-link nav-link-active">Home</a>
-          </div>
-          <div class="nav-group">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/67ce5befbaeaf876800159b3725f2d7d616cd011b7e9957129f4272c9add4776?placeholderIfAbsent=true&apiKey=ea11a689ef344d449385cb3a4188511e" alt="Work icon" class="nav-icon" />
-            <a href="#" class="nav-link">Work</a>
-          </div>
-          <div class="nav-group">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a274658f242941b22691a8149f0b822e37bd0b7e3435754547ee63af6c00dba4?placeholderIfAbsent=true&apiKey=ea11a689ef344d449385cb3a4188511e" alt="Chat icon" class="nav-icon-chat" />
-            <a href="#" class="nav-link">Chat</a>
-          </div>
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/48fa0276107784eff2947cf2a734c1f6cfbd2157d86cc349daebb7142ff2394f?placeholderIfAbsent=true&apiKey=ea11a689ef344d449385cb3a4188511e"
+                alt="User profile" class="nav-profile-img" />
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="content-wrapper">
+            <section class="ongoing-work" aria-label="Ongoing work">
+                <div class="ongoing-work-container">
+                    <h2 class="section-title">Ongoing Work</h2>
+                    <div class="work-filter">
+                        <label for="work-status" class="filter-label">Filter by Status:</label>
+                        <select id="work-status" class="status-dropdown">
+                            <option value="all">All</option>
+                            <option value="revision">Revision</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                    <article class="work-item" data-status="revision">
+                        <h3 class="freelancer-name">Freelancer1</h3>
+                        <p class="work-details">
+                            Logo designing and Custom templates.<br />
+                            Status: <span class="status-text">Revision</span><br />
+                            Due by: 22 March 2025
+                        </p>
+                        <div class="work-actions">
+                            <button class="action-btn message-btn" aria-label="Message Freelancer1">Message</button>
+                            <button class="action-btn update-btn" aria-label="Update status for Freelancer1">Update
+                                Status</button>
+                        </div>
+                        <hr class="divider" />
+                    </article>
+                    <article class="work-item" data-status="revision">
+                        <h3 class="freelancer-name">Freelancer2</h3>
+                        <p class="work-details">
+                            UI/UX design.<br />
+                            Status: <span class="status-text">Revision</span><br />
+                            Due by: 22 March 2025
+                        </p>
+                        <div class="work-actions">
+                            <button class="action-btn message-btn" aria-label="Message Freelancer2">Message</button>
+                            <button class="action-btn update-btn" aria-label="Update status for Freelancer2">Update
+                                Status</button>
+                        </div>
+                        <hr class="divider" />
+                    </article>
+                </div>
+            </section>
+
+            <section class="freelance-listings" aria-label="Freelance listings">
+                <div class="listings-container">
+                    <h2 class="listings-title">Top Freelance Work for You</h2>
+                    <p class="listings-subtitle">Based on your hiring history and preferences</p>
+
+                    <form class="search-filters" action="#" method="GET">
+                        <input type="text" class="search-box" placeholder="Search by skills..."
+                            aria-label="Search freelance skills" />
+                        <button type="button" class="filters-button" aria-label="Open filters">Filters</button>
+                        <div class="filters-modal" hidden>
+                            <label><input type="checkbox" name="rating" value="4+"> Rating 4+</label>
+                            <label><input type="checkbox" name="budget" value="100-500"> Budget $100-$500</label>
+                            <button type="button" class="apply-filters" aria-label="Apply filters">Apply</button>
+                        </div>
+                    </form>
+
+                    <div class="listings-grid">
+                        <article class="job-card" data-rating="4.5" data-budget="100">
+                            <div class="job-image"></div>
+                            <div class="job-details">
+                                <h3 class="job-title">UI/UX Developer</h3>
+                                <p class="job-stats">
+                                    Rating: 4.5/5<br />
+                                    Reviews: 1000<br />
+                                    Basic Ask: $100
+                                </p>
+                                <button class="hire-btn" aria-label="Hire UI/UX Developer">Hire Now</button>
+                            </div>
+                        </article>
+                        <hr class="listing-divider" />
+                        <article class="job-card" data-rating="4.5" data-budget="100">
+                            <div class="job-image"></div>
+                            <div class="job-details">
+                                <h3 class="job-title">UI/UX Developer</h3>
+                                <p class="job-stats">
+                                    Rating: 4.5/5<br />
+                                    Reviews: 1000<br />
+                                    Basic Ask: $100
+                                </p>
+                                <button class="hire-btn" aria-label="Hire UI/UX Developer">Hire Now</button>
+                            </div>
+                        </article>
+                        <hr class="listing-divider" />
+                    </div>
+                </div>
+            </section>
         </div>
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/48fa0276107784eff2947cf2a734c1f6cfbd2157d86cc349daebb7142ff2394f?placeholderIfAbsent=true&apiKey=ea11a689ef344d449385cb3a4188511e" alt="User profile" class="nav-profile-img" />
-      </nav>
-</header>
+    </main>
 
-<main class="main-content">
-  <div class="content-wrapper">
-    <section class="ongoing-work" aria-label="Ongoing work">
-      <div class="ongoing-work-container">
-        <h2 class="section-title">Ongoing Work</h2>
-        <div class="work-filter">
-          <label for="work-status" class="filter-label">Filter by Status:</label>
-          <select id="work-status" class="status-dropdown">
-            <option value="all">All</option>
-            <option value="revision">Revision</option>
-            <option value="in-progress">In Progress</option>
-            <option value="completed">Completed</option>
-          </select>
-        </div>
-        <article class="work-item" data-status="revision">
-          <h3 class="freelancer-name">Freelancer1</h3>
-          <p class="work-details">
-            Logo designing and Custom templates.<br />
-            Status: <span class="status-text">Revision</span><br />
-            Due by: 22 March 2025
-          </p>
-          <div class="work-actions">
-            <button class="action-btn message-btn" aria-label="Message Freelancer1">Message</button>
-            <button class="action-btn update-btn" aria-label="Update status for Freelancer1">Update Status</button>
-          </div>
-          <hr class="divider" />
-        </article>
-        <article class="work-item" data-status="revision">
-          <h3 class="freelancer-name">Freelancer2</h3>
-          <p class="work-details">
-            UI/UX design.<br />
-            Status: <span class="status-text">Revision</span><br />
-            Due by: 22 March 2025
-          </p>
-          <div class="work-actions">
-            <button class="action-btn message-btn" aria-label="Message Freelancer2">Message</button>
-            <button class="action-btn update-btn" aria-label="Update status for Freelancer2">Update Status</button>
-          </div>
-          <hr class="divider" />
-        </article>
-      </div>
-    </section>
+    <script>
+        // JavaScript for added functionalities
+        document.addEventListener('DOMContentLoaded', () => {
+            // Filter ongoing work by status
+            const statusDropdown = document.querySelector('#work-status');
+            const workItems = document.querySelectorAll('.work-item');
+            statusDropdown.addEventListener('change', () => {
+                const selectedStatus = statusDropdown.value;
+                workItems.forEach(item => {
+                    const itemStatus = item.dataset.status;
+                    item.style.display = selectedStatus === 'all' || itemStatus === selectedStatus ? 'block' : 'none';
+                });
+            });
 
-    <section class="freelance-listings" aria-label="Freelance listings">
-      <div class="listings-container">
-        <h2 class="listings-title">Top Freelance Work for You</h2>
-        <p class="listings-subtitle">Based on your hiring history and preferences</p>
+            // Toggle filters modal
+            const filtersBtn = document.querySelector('.filters-button');
+            const filtersModal = document.querySelector('.filters-modal');
+            filtersBtn.addEventListener('click', () => {
+                filtersModal.hidden = !filtersModal.hidden;
+            });
 
-        <form class="search-filters" action="#" method="GET">
-          <input type="text" class="search-box" placeholder="Search by skills..." aria-label="Search freelance skills" />
-          <button type="button" class="filters-button" aria-label="Open filters">Filters</button>
-          <div class="filters-modal" hidden>
-            <label><input type="checkbox" name="rating" value="4+"> Rating 4+</label>
-            <label><input type="checkbox" name="budget" value="100-500"> Budget $100-$500</label>
-            <button type="button" class="apply-filters" aria-label="Apply filters">Apply</button>
-          </div>
-        </form>
+            // Apply filters to freelance listings
+            const applyFiltersBtn = document.querySelector('.apply-filters');
+            const jobCards = document.querySelectorAll('.job-card');
+            applyFiltersBtn.addEventListener('click', () => {
+                const ratingFilter = document.querySelector('input[name="rating"]:checked')?.value;
+                const budgetFilter = document.querySelector('input[name="budget"]:checked')?.value;
+                jobCards.forEach(card => {
+                    const rating = parseFloat(card.dataset.rating);
+                    const budget = parseInt(card.dataset.budget);
+                    const ratingPass = !ratingFilter || rating >= 4;
+                    const budgetPass = !budgetFilter || (budget >= 100 && budget <= 500);
+                    card.style.display = ratingPass && budgetPass ? 'block' : 'none';
+                });
+                filtersModal.hidden = true;
+            });
 
-        <div class="listings-grid">
-          <article class="job-card" data-rating="4.5" data-budget="100">
-            <div class="job-image"></div>
-            <div class="job-details">
-              <h3 class="job-title">UI/UX Developer</h3>
-              <p class="job-stats">
-                Rating: 4.5/5<br />
-                Reviews: 1000<br />
-                Basic Ask: $100
-              </p>
-              <button class="hire-btn" aria-label="Hire UI/UX Developer">Hire Now</button>
-            </div>
-          </article>
-          <hr class="listing-divider" />
-          <article class="job-card" data-rating="4.5" data-budget="100">
-            <div class="job-image"></div>
-            <div class="job-details">
-              <h3 class="job-title">UI/UX Developer</h3>
-              <p class="job-stats">
-                Rating: 4.5/5<br />
-                Reviews: 1000<br />
-                Basic Ask: $100
-              </p>
-              <button class="hire-btn" aria-label="Hire UI/UX Developer">Hire Now</button>
-            </div>
-          </article>
-          <hr class="listing-divider" />
-        </div>
-      </div>
-    </section>
-  </div>
-</main>
+            // Message button placeholder
+            document.querySelectorAll('.message-btn').forEach(btn => {
+                btn.addEventListener('click', () => alert('Message functionality to be implemented!'));
+            });
 
-<script>
-  // JavaScript for added functionalities
-  document.addEventListener('DOMContentLoaded', () => {
-    // Filter ongoing work by status
-    const statusDropdown = document.querySelector('#work-status');
-    const workItems = document.querySelectorAll('.work-item');
-    statusDropdown.addEventListener('change', () => {
-      const selectedStatus = statusDropdown.value;
-      workItems.forEach(item => {
-        const itemStatus = item.dataset.status;
-        item.style.display = selectedStatus === 'all' || itemStatus === selectedStatus ? 'block' : 'none';
-      });
-    });
+            // Update status placeholder
+            document.querySelectorAll('.update-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const newStatus = prompt('Enter new status (e.g., In Progress, Completed):');
+                    if (newStatus) {
+                        const workItem = btn.closest('.work-item');
+                        workItem.querySelector('.status-text').textContent = newStatus;
+                        workItem.dataset.status = newStatus.toLowerCase();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
 
-    // Toggle filters modal
-    const filtersBtn = document.querySelector('.filters-button');
-    const filtersModal = document.querySelector('.filters-modal');
-    filtersBtn.addEventListener('click', () => {
-      filtersModal.hidden = !filtersModal.hidden;
-    });
-
-    // Apply filters to freelance listings
-    const applyFiltersBtn = document.querySelector('.apply-filters');
-    const jobCards = document.querySelectorAll('.job-card');
-    applyFiltersBtn.addEventListener('click', () => {
-      const ratingFilter = document.querySelector('input[name="rating"]:checked')?.value;
-      const budgetFilter = document.querySelector('input[name="budget"]:checked')?.value;
-      jobCards.forEach(card => {
-        const rating = parseFloat(card.dataset.rating);
-        const budget = parseInt(card.dataset.budget);
-        const ratingPass = !ratingFilter || rating >= 4;
-        const budgetPass = !budgetFilter || (budget >= 100 && budget <= 500);
-        card.style.display = ratingPass && budgetPass ? 'block' : 'none';
-      });
-      filtersModal.hidden = true;
-    });
-
-    // Message button placeholder
-    document.querySelectorAll('.message-btn').forEach(btn => {
-      btn.addEventListener('click', () => alert('Message functionality to be implemented!'));
-    });
-
-    // Update status placeholder
-    document.querySelectorAll('.update-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const newStatus = prompt('Enter new status (e.g., In Progress, Completed):');
-        if (newStatus) {
-          const workItem = btn.closest('.work-item');
-          workItem.querySelector('.status-text').textContent = newStatus;
-          workItem.dataset.status = newStatus.toLowerCase();
-        }
-      });
-    });
-  });
-</script>
+</html>
