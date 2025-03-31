@@ -38,7 +38,10 @@ body, html {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background-image: url('../Assets/Images/common_backround_image.svg'); /* Check this path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   z-index: -1;
   opacity: 0.7;
 }
