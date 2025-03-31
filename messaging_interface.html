@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkLancer - Messaging</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Akshar:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="messaging_interface.css">  
+</head>
+<body>
+  <header class="nav-header">
+    <nav class="nav-container">
+      <h1 class="logo">LinkLancer</h1>
+      <div class="nav-links">
+        <a href="homepage.html" class="nav-link">
+          <img src="/api/placeholder/50/50" alt="Home icon" class="nav-icon">
+          <span>Home</span>
+        </a>
+        <a href="workpage.html" class="nav-link nav-link-active">
+          <img src="/api/placeholder/50/50" alt="Work icon" class="nav-icon-work">
+          <span>Work</span>
+        </a>
+        <img src="/api/placeholder/50/50" alt="Menu icon" class="nav-icon-menu">
+      </div>
+      <img src="/api/placeholder/50/50" alt="Profile" class="nav-profile">
+    </nav>
+  </header>
+
+  <main class="chat-container">
+    <section class="messaging-sidebar">
+      <div class="messaging-header">
+        <h2 class="messaging-title">Messaging</h2>
+        <button class="search-button">Search in messages</button>
+        <hr class="divider">
+      </div>
+
+      <div class="conversation-list">
+        <article class="conversation-item">
+          <div class="user-avatar active"></div>
+          <div class="conversation-content">
+            <div class="conversation-header">
+              <h3 class="business-name">Business 1</h3>
+              <time class="message-time">23 Feb, 23:16</time>
+            </div>
+            <p class="message-preview">
+              business1:<br>These changes are to be made in the project scope...
+            </p>
+          </div>
+        </article>
+
+        <hr class="divider">
+
+        <article class="conversation-item">
+          <div class="user-avatar active"></div>
+          <div class="conversation-content">
+            <div class="conversation-header">
+              <h3 class="business-name">Business 2</h3>
+              <time class="message-time">23 Feb, 22:45</time>
+            </div>
+            <p class="message-preview">
+              business2:<br>Can you provide an update on the current progress?
+            </p>
+          </div>
+        </article>
+
+        <hr class="divider">
+
+        <article class="conversation-item">
+          <div class="user-avatar"></div>
+          <div class="conversation-content">
+            <div class="conversation-header">
+              <h3 class="business-name">Business 3</h3>
+              <time class="message-time">22 Feb, 15:30</time>
+            </div>
+            <p class="message-preview">
+              You:<br>I've completed the first phase of the project as requested...
+            </p>
+          </div>
+        </article>
+
+        <hr class="divider">
+
+        <article class="conversation-item">
+          <div class="user-avatar"></div>
+          <div class="conversation-content">
+            <div class="conversation-header">
+              <h3 class="business-name">Business 4</h3>
+              <time class="message-time">21 Feb, 09:12</time>
+            </div>
+            <p class="message-preview">
+              business4:<br>Thank you for the quick delivery. We'd like to discuss...
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="chat-area">
+      <header class="chat-header">
+        <div class="user-avatar active"></div>
+        <h2 class="chat-title">Business 1</h2>
+      </header>
+
+      <div class="messages-container">
+        <article class="message received">
+          We need to complete this work as soon as possible. The deadline is approaching fast.
+        </article>
+        <article class="message received">
+          Can you confirm you'll be able to deliver by Friday?
+        </article>
+        <article class="message sent">
+          I understand the urgency. I've already completed 70% of the work and will ensure delivery by Thursday.
+        </article>
+        <article class="message sent">
+          Would you like me to send a progress update tomorrow as well?
+        </article>
+        <article class="message received">
+          That would be great. Please include any potential issues you might encounter.
+        </article>
+      </div>
+
+      <footer class="message-input-container">
+        <div class="input-wrapper">
+          <img src="/api/placeholder/25/25" alt="Attachment" class="input-icon">
+          <input type="text" placeholder="Send a message" class="message-input">
+        </div>
+        <button class="send-button">
+          <img src="/api/placeholder/32/32" alt="Send" class="send-icon">
+        </button>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="workpage.css">
+  <title>LinkLancer - Find & Manage Freelance Work</title>
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <div class="header-logo">
+        <h1>LinkLancer</h1>
+      </div>
+      <nav class="header-nav">
+        <a href="index.html" class="nav-item">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f27a52105a7daf1417732418ed9125fd4dc4212e1344e872e91c9b3fd47e64cc" alt="Home icon" class="nav-icon">
+          <span>Home</span>
+        </a>
+        <a href="work.html" class="nav-item active">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e7b1f0639de886b808f8968d4eb3c232fe0368d89442d5e02dd32428b583d566" alt="Work icon" class="nav-icon">
+          <span>Work</span>
+        </a>
+        <a href="messages.html" class="nav-item">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f27a52105a7daf1417732418ed9125fd4dc4212e1344e872e91c9b3fd47e64cc" alt="Messages icon" class="nav-icon">
+          <span>Messages</span>
+        </a>
+        <button class="menu-toggle">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4eb6aa7a626de05c6eea663c35555ae87d00feefc12e6667a32e332c4ec3def3" alt="Menu">
+        </button>
+      </nav>
+      <div class="header-profile">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/48fa0276107784eff2947cf2a734c1f6cfbd2157d86cc349daebb7142ff2394f" alt="Profile">
+      </div>
+    </div>
+  </header>
+
+  <main class="work-page">
+    <div class="container">
+      <div class="content-wrapper">
+        <!-- Ongoing Work Section -->
+        <section class="ongoing-work">
+          <div class="card">
+            <h2 class="section-title">Ongoing Work</h2>
+            
+            <article class="work-item">
+              <h3>Business 1</h3>
+              <p>
+                Logo designing and Custom templates.<br>
+                <span class="status status-revision">Revision</span><br>
+                <span class="due-date">Due by: 22 March 2025</span>
+              </p>
+              <hr>
+            </article>
+            
+            <article class="work-item">
+              <h3>Business 2</h3>
+              <p>
+                UI/UX design.<br>
+                <span class="status status-progress">In Progress</span><br>
+                <span class="due-date">Due by: 22 March 2025</span>
+              </p>
+              <hr>
+            </article>
+          </div>
+        </section>
+
+        <!-- Freelance Work Section -->
+        <section class="freelance-work">
+          <div class="card">
+            <h2 class="section-title">Top freelance work for you</h2>
+            <p class="section-subtitle">Based on your profile, preferences, and skills</p>
+
+            <div class="search-bar">
+              <input type="text" placeholder="Search for projects or skills...">
+              <button>
+                <span>Filters</span>
+              </button>
+            </div>
+
+            <div class="work-listings">
+              <!-- Listing 1 -->
+              <article class="listing-item">
+                <div class="listing-icon"></div>
+                <div class="listing-details">
+                  <h3>UI/UX development and custom Templates</h3>
+                  <p>
+                    <span class="due-date">Due by: 22 March 2025</span><br>
+                    <span class="project-price">Project Price: $1000 (50% upfront, 50% on completion)</span>
+                  </p>
+                </div>
+              </article>
+              <hr>
+
+              <!-- Listing 2 -->
+              <article class="listing-item">
+                <div class="listing-icon"></div>
+                <div class="listing-details">
+                  <h3>Mobile App Interface Design</h3>
+                  <p>
+                    <span class="due-date">Due by: 28 March 2025</span><br>
+                    <span class="project-price">Project Price: $1500 (40% upfront, 60% on completion)</span>
+                  </p>
+                </div>
+              </article>
+              <hr>
+
+              <!-- Listing 3 -->
+              <article class="listing-item">
+                <div class="listing-icon"></div>
+                <div class="listing-details">
+                  <h3>E-commerce Website Redesign</h3>
+                  <p>
+                    <span class="due-date">Due by: 5 April 2025</span><br>
+                    <span class="project-price">Project Price: $2000 (30% upfront, 70% on completion)</span>
+                  </p>
+                </div>
+              </article>
+              <hr>
+
+              <!-- Listing 4 -->
+              <article class="listing-item">
+                <div class="listing-icon"></div>
+                <div class="listing-details">
+                  <h3>Brand Identity Package</h3>
+                  <p>
+                    <span class="due-date">Due by: 10 April 2025</span><br>
+                    <span class="project-price">Project Price: $1200 (50% upfront, 50% on completion)</span>
+                  </p>
+                </div>
+              </article>
+              <hr>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Mobile menu toggle functionality
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      document.querySelector('.header-nav').classList.toggle('mobile-menu-open');
+    });
+  </script>
+</body>
+</html>
