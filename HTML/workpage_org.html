@@ -25,23 +25,25 @@
                     <div class="logo-container">
                         <h1 class="logo-text">LinkLancer</h1>
                         <img src="../Assets/Images/workpage_org_img1.svg"
-                            alt="LinkLancer logo" class="logo-icon" />
+                         alt="LinkLancer logo" class="logo-icon" />
                     </div>
-                    <a href="#" class="nav-link nav-link-active">Home</a>
+                    <a href="homepage.html" class="nav-link nav-link-active">Home</a>
                 </div>
                 <div class="nav-group">
                     <img src="../Assets/Images/workpage_org_img2.svg"
                         alt="Work icon" class="nav-icon" />
-                    <a href="#" class="nav-link">Work</a>
+                    <a href="workpage.html" class="nav-link">Work</a>
                 </div>
                 <div class="nav-group">
                     <img src="../Assets/Images/workpage_org_img3.svg"
                         alt="Chat icon" class="nav-icon-chat" />
-                    <a href="#" class="nav-link">Chat</a>
+                    <a href="messaging_interface.html" class="nav-link">Chat</a>
                 </div>
             </div>
-            <img src="../Assets/Images/workpage_org_img4.png"
-                alt="User profile" class="nav-profile-img" />
+            <div><img src="../Assets/Images/workpage_org_img4.png"
+                 alt="User profile" class="nav-profile-img" />
+            <a href = "firstpost.html">Post</a>
+        </div>
         </nav>
     </header>
 
@@ -140,7 +142,6 @@
     </main>
 
     <script>
-        // JavaScript for added functionalities
         document.addEventListener('DOMContentLoaded', () => {
             // Filter ongoing work by status
             const statusDropdown = document.querySelector('#work-status');
@@ -152,14 +153,14 @@
                     item.style.display = selectedStatus === 'all' || itemStatus === selectedStatus ? 'block' : 'none';
                 });
             });
-
+    
             // Toggle filters modal
             const filtersBtn = document.querySelector('.filters-button');
             const filtersModal = document.querySelector('.filters-modal');
             filtersBtn.addEventListener('click', () => {
                 filtersModal.hidden = !filtersModal.hidden;
             });
-
+    
             // Apply filters to freelance listings
             const applyFiltersBtn = document.querySelector('.apply-filters');
             const jobCards = document.querySelectorAll('.job-card');
@@ -169,22 +170,22 @@
                 jobCards.forEach(card => {
                     const rating = parseFloat(card.dataset.rating);
                     const budget = parseInt(card.dataset.budget);
-                    const ratingPass = !ratingFilter || rating >= 4;
+                    const ratingPass = !ratingFilter || (rating >= 4);
                     const budgetPass = !budgetFilter || (budget >= 100 && budget <= 500);
                     card.style.display = ratingPass && budgetPass ? 'block' : 'none';
                 });
                 filtersModal.hidden = true;
             });
-
-            // Message button placeholder
+    
+            // Message button placeholder (for now just an alert)
             document.querySelectorAll('.message-btn').forEach(btn => {
                 btn.addEventListener('click', () => alert('Message functionality to be implemented!'));
             });
-
-            // Update status placeholder
+    
+            // Update status placeholder: allows updating the work status of a freelancer
             document.querySelectorAll('.update-btn').forEach(btn => {
                 btn.addEventListener('click', () => {
-                    const newStatus = prompt('Enter new status (e.g., In Progress, Completed):');
+                    const newStatus = prompt('Enter new status (e.g., In Progress, Completed, etc.):');
                     if (newStatus) {
                         const workItem = btn.closest('.work-item');
                         workItem.querySelector('.status-text').textContent = newStatus;
@@ -194,6 +195,7 @@
             });
         });
     </script>
+    
 </body>
 
 </html>

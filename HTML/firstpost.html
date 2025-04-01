@@ -74,7 +74,6 @@
     </section>
 
     <script>
-        // Basic JavaScript for added functionalities
         document.addEventListener('DOMContentLoaded', () => {
             const textarea = document.querySelector('.create-placeholder');
             const charCount = document.querySelector('.char-count');
@@ -82,14 +81,15 @@
             const mediaInput = document.querySelector('#media-input');
             const mediaPreview = document.querySelector('.media-preview');
             const mediaUploadBtn = document.querySelector('.media-upload');
-
+            const postForm = document.querySelector('.create-post-form');
+    
             // Character counter
             textarea.addEventListener('input', () => {
                 const count = textarea.value.length;
                 charCount.textContent = count;
                 postButton.disabled = count === 0;
             });
-
+    
             // Media upload and preview
             mediaUploadBtn.addEventListener('click', () => mediaInput.click());
             mediaInput.addEventListener('change', () => {
@@ -104,8 +104,49 @@
                     mediaPreview.appendChild(previewElement);
                 }
             });
+    
+            // Create a footer message
+            const footerMessage = document.createElement("div");
+            footerMessage.style.position = "fixed";
+            footerMessage.style.bottom = "10px";
+            footerMessage.style.left = "50%";
+            footerMessage.style.transform = "translateX(-50%)";
+            footerMessage.style.backgroundColor = "#4CAF50";
+            footerMessage.style.color = "white";
+            footerMessage.style.padding = "10px 20px";
+            footerMessage.style.borderRadius = "5px";
+            footerMessage.style.display = "none";
+            footerMessage.style.fontSize = "16px";
+            footerMessage.style.boxShadow = "0px 4px 6px rgba(0,0,0,0.1)";
+            document.body.appendChild(footerMessage);
+    
+            // Handle Post Submission
+            postForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+    
+                // Show "Post Done" message
+                footerMessage.innerText = "✅ Post Done!";
+                footerMessage.style.display = "block";
+    
+                // Save a flag in localStorage to show a message on homepage_org.html
+                localStorage.setItem("postPublished", "✅ Post Published Successfully!");
+    
+                // Clear the form fields
+                textarea.value = "";
+                charCount.textContent = "0";
+                postButton.disabled = true;
+                mediaPreview.innerHTML = "";
+                mediaInput.value = "";
+    
+                // Redirect to homepage after 3 seconds
+                setTimeout(() => {
+                    window.location.href = "homepage_org.html";
+                }, 2000);
+            });
         });
     </script>
+    
+    
 </body>
 
 </html>

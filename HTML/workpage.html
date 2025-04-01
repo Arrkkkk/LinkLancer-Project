@@ -16,15 +16,15 @@
         <h1>LinkLancer</h1>
       </div>
       <nav class="header-nav">
-        <a href="index.html" class="nav-item">
+        <a href="homepage_org.html" class="nav-item">
           <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f27a52105a7daf1417732418ed9125fd4dc4212e1344e872e91c9b3fd47e64cc" alt="Home icon" class="nav-icon">
           <span>Home</span>
         </a>
-        <a href="work.html" class="nav-item active">
+        <a href="workpage.html" class="nav-item active">
           <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e7b1f0639de886b808f8968d4eb3c232fe0368d89442d5e02dd32428b583d566" alt="Work icon" class="nav-icon">
           <span>Work</span>
         </a>
-        <a href="messages.html" class="nav-item">
+        <a href="messaging_interface.html" class="nav-item">
           <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f27a52105a7daf1417732418ed9125fd4dc4212e1344e872e91c9b3fd47e64cc" alt="Messages icon" class="nav-icon">
           <span>Messages</span>
         </a>
@@ -141,10 +141,27 @@
   </main>
 
   <script>
-    // Mobile menu toggle functionality
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-      document.querySelector('.header-nav').classList.toggle('mobile-menu-open');
+    document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.querySelector(".search-bar input");
+        const listingItems = document.querySelectorAll(".listing-item");
+
+        // Function to filter jobs
+        searchInput.addEventListener("input", function () {
+            const searchText = searchInput.value.toLowerCase().trim();
+
+            listingItems.forEach((item) => {
+                const jobTitle = item.querySelector("h3").innerText.toLowerCase();
+                const jobDetails = item.querySelector("p").innerText.toLowerCase();
+
+                if (jobTitle.includes(searchText) || jobDetails.includes(searchText)) {
+                    item.style.display = "block"; // Show matched job
+                } else {
+                    item.style.display = "none"; // Hide unmatched job
+                }
+            });
+        });
     });
-  </script>
+</script>
+
 </body>
 </html>
