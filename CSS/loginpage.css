@@ -118,7 +118,7 @@ body, html {
 
 /* Username field with white border */
 .form-group:first-of-type input {
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(248, 189, 0, 0.8);
 }
 
 /* Password field with golden border */

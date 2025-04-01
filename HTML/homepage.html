@@ -16,41 +16,35 @@
 <body>
   <main class="homepage">
     <header class="header">
-      <div class="container header-container">
-        <div class="brand-section">
-          <div class="logo-container">
-            <h1 class="brand-name">LinkLancer</h1>
-            <img src="/api/placeholder/51/43" alt="LinkLancer logo" class="brand-logo" />
-          </div>
-          <nav class="navigation">
-            <ul class="nav-list">
-              <li><a href="#" class="nav-link active">Home</a></li>
-              <li><a href="#" class="nav-link">Explore</a></li>
-              <li><a href="#" class="nav-link">Messages</a></li>
-            </ul>
-          </nav>
+      <nav class="nav-bar">
+        <div class="nav-content">
+            <div class="nav-group">
+                <div class="logo-container">
+                    <h1 class="logo-text">LinkLancer</h1>
+                    <img src="../Assets/Images/homepage_org_img1.svg" alt="LinkLancer logo" class="logo-icon" />
+                </div>
+                <a href="../HTML/homepage.html" class="nav-link nav-link-active">Home</a>
+            </div>
+            <div class="nav-group">
+                <img src="../Assets/Images/homepage_org_img2.svg" alt="Work icon" class="nav-icon" />
+                <a href="../HTML/workpage.html" class="nav-link">Work</a>
+            </div>
+            <div class="nav-group">
+                <img src="../Assets/Images/homepage_org_img3.svg" alt="Chat icon" class="nav-icon-chat" />
+                <a href="../HTML/messaging_interface.html" class="nav-link">Chat</a>
+            </div>
         </div>
-
-        <div class="header-actions">
-          <div class="work-section">
-            <img src="/api/placeholder/34/34" alt="Work icon" class="work-icon" />
-            <span class="work-text">Work</span>
-          </div>
-          <img src="/api/placeholder/42/42" alt="User profile" class="user-profile" />
-          <button class="menu-button" aria-label="Menu">
-            <img src="/api/placeholder/42/49" alt="Menu icon" class="menu-icon" />
-          </button>
-        </div>
-      </div>
-    </header>
-
+        <a href="../HTML/detailssection.html"><img src="../Assets/Images/john_doe.png" alt="User profile"
+            class="nav-profile-img" /></a>
+    </nav>
+  </header>
     <div class="main-content">
       <div class="container content-grid">
         <!-- Profile Column -->
         <aside class="profile-column">
           <section class="profile-card">
             <div class="profile-info">
-              <img src="/api/placeholder/80/80" alt="Profile picture" class="profile-picture" />
+              <img src="../Assets/Images/john_doe.png" alt="Profile picture" class="profile-picture" />
               <div class="profile-details">
                 <h2 class="profile-name">Rajit Agrawal</h2>
                 <div class="profile-skills">
@@ -79,12 +73,12 @@
           <section class="post-creation">
             <div class="create-post">
               <div class="new-post">
-                <img src="/api/placeholder/49/49" alt="Create post" class="create-icon" />
+                <img src="../Assets/Images/97-512.webp" alt="Create post" class="create-icon" />
                 <input type="text" class="create-input" placeholder="Share a new project..." />
               </div>
               <div class="post-actions">
                 <div class="media-section">
-                  <img src="/api/placeholder/26/25" alt="Media icon" class="media-icon" />
+                  <img src="../Assets/Images/attach.png" alt="Media icon" class="media-icon" />
                   <span class="media-text">Media</span>
                 </div>
                 <div class="sort-section">
@@ -101,14 +95,14 @@
             <article class="post">
               <div class="post-header">
                 <div class="post-author">
-                  <img src="/api/placeholder/40/40" alt="Author avatar" class="author-avatar" />
+                  <img src="../Assets/Images/john_doe.png" alt="Author avatar" class="author-avatar" />
                   <div class="author-info">
                     <h3 class="author-name">Rajit Agrawal</h3>
                     <span class="post-time">2 hours ago</span>
                   </div>
                 </div>
                 <button class="more-options" aria-label="More options">
-                  <img src="/api/placeholder/24/24" alt="More options" />
+                  <img src="../Assets/Images/medium-priority.svg" alt="More options" class="more-options-icon"/>
                 </button>
               </div>
 
@@ -125,20 +119,20 @@
                 thoughts—what's your favorite memory of playing or watching
                 cricket? Let's celebrate the game together!
               </p>
-              <img src="/api/placeholder/600/300" alt="Cricket illustration" class="post-image" />
+              <img src="../Assets/Images/homepage_org_img9.png" alt="Cricket illustration" class="post-image" />
 
               <div class="post-engagement">
                 <div class="engagement-actions">
                   <button class="action-button like-button">
-                    <img src="/api/placeholder/20/20" alt="Like" />
+                    <img src="../Assets/Images/facebook-like.png" alt="Like" class="like_icon"/>
                     <span>126</span>
                   </button>
                   <button class="action-button comment-button">
-                    <img src="/api/placeholder/20/20" alt="Comment" />
+                    <img src="../Assets/Images/Chat comment conversation.svg" alt="Comment" class="comment-icon"/>
                     <span>24</span>
                   </button>
                   <button class="action-button share-button">
-                    <img src="/api/placeholder/20/20" alt="Share" />
+                    <img src="../Assets/Images/6826340.png" alt="Share" class="share-icon"/>
                     <span>Share</span>
                   </button>
                 </div>
@@ -152,7 +146,7 @@
           <section class="trending-section">
             <div class="trending-header">
               <h2 class="trending-title">Trending now</h2>
-              <img src="/api/placeholder/32/32" alt="Trending icon" class="trending-icon" />
+              <img src="../Assets/Images/1946430.png" alt="Trending icon" class="trending-icon" />
             </div>
 
             <article class="trending-item">
