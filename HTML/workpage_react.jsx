@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../CSS/workpage.css';
 
-// Import images
 import workIcon from '../Assets/Images/homepage_org_img2.svg';
 import chatIcon from '../Assets/Images/homepage_org_img3.svg';
 import profileImage from '../Assets/Images/john_doe.png';
@@ -16,7 +15,6 @@ const WorkPage = () => {
   const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
   const [searchText, setSearchText] = useState('');
   
-  // Work items data
   const [workItems, setWorkItems] = useState([
     {
       id: 1,
@@ -34,7 +32,6 @@ const WorkPage = () => {
     }
   ]);
   
-  // Job listings data
   const jobListings = [
     {
       id: 1,
@@ -78,17 +75,16 @@ const WorkPage = () => {
     }
   ];
   
-  // Handle status filter change
+
   const handleStatusChange = (e) => {
     setSelectedStatus(e.target.value);
   };
   
-  // Handle message button click
+
   const handleMessageClick = () => {
     alert('Message functionality to be implemented!');
   };
   
-  // Handle update status button click
   const handleUpdateStatus = (id) => {
     const newStatus = prompt('Enter new status (e.g., In Progress, Completed, etc.):');
     if (newStatus) {
@@ -104,12 +100,10 @@ const WorkPage = () => {
     }
   };
   
-  // Handle search input change
   const handleSearchChange = (e) => {
     setSearchText(e.target.value.toLowerCase().trim());
   };
   
-  // Filtered job listings based on search
   const filteredJobListings = jobListings.filter(job => {
     if (searchText === '') return true;
     return (
