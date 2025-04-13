@@ -159,9 +159,12 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const jobInput = document.getElementById("jobInput");
+            const addPostBtn = document.getElementById("addPostBtn");
+    
+            const feedSection = document.querySelector(".feed-section");
             const footerMessage = document.createElement("div");
-
-            // Styling the footer message
+    
+            // Style success message
             footerMessage.style.position = "fixed";
             footerMessage.style.bottom = "10px";
             footerMessage.style.left = "50%";
@@ -174,31 +177,39 @@
             footerMessage.style.fontSize = "16px";
             footerMessage.style.boxShadow = "0px 4px 6px rgba(0,0,0,0.1)";
             document.body.appendChild(footerMessage);
-
-            // Event Listener for Enter Key
+    
+            function createPost(jobText) {
+                const post = document.createElement("article");
+                post.className = "post-card";
+                post.innerHTML = `
+                    <h3 class="post-title">${jobText}</h3>
+                    <p class="post-content">This is a new job post added by the user.</p>
+                    <img src="../Assets/Images/homepage_org_img9.png" alt="Post image" class="post-image" />
+                `;
+                feedSection.appendChild(post);
+            }
+    
+            addPostBtn.addEventListener("click", () => {
+                const jobText = jobInput.value.trim();
+                if (jobText !== "") {
+                    createPost(jobText);
+                    footerMessage.innerText = `✅ Job Posted: ${jobText}`;
+                    footerMessage.style.display = "block";
+                    setTimeout(() => {
+                        footerMessage.style.display = "none";
+                    }, 3000);
+                    jobInput.value = "";
+                }
+            });
+    
             jobInput.addEventListener("keypress", function (event) {
                 if (event.key === "Enter") {
-                    event.preventDefault(); // Prevent form submission
-                    const jobText = jobInput.value.trim();
-
-                    if (jobText !== "") {
-                        footerMessage.innerText = `✅ Job Updated: ${jobText}`;
-                        footerMessage.style.display = "block";
-
-                        // Hide message after 3 seconds
-                        setTimeout(() => {
-                            footerMessage.style.display = "none";
-                        }, 3000);
-
-                        // Clear input field
-                        jobInput.value = "";
-                    }
+                    event.preventDefault();
+                    addPostBtn.click(); // Trigger the button click
                 }
             });
         });
     </script>
-
-
 </body>
 
 </html>
